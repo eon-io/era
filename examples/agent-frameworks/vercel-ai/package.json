@@ -1,0 +1,13 @@
+{
+  "name": "era-example-vercel-ai",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node agent.mjs"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.0",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "ai": "^5.0.0"
+  }
+}

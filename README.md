@@ -77,10 +77,12 @@ Runnable, self-contained starting points in [`examples/`](examples/):
 
 | Directory | What it shows |
 | --- | --- |
+| [`curl/`](examples/curl) | The whole model in one shell script — the REST API and a by-hand MCP handshake, no SDK |
 | [`mcp-clients/`](examples/mcp-clients) | Pointing Claude Code, Claude Desktop, and MCP Inspector at an environment |
-| [`agent-frameworks/`](examples/agent-frameworks) | The same connection from OpenAI Agents SDK, LangGraph, Mastra, Vercel AI SDK, and the Claude Agent SDK |
+| [`agent-frameworks/`](examples/agent-frameworks) | Runnable agents: Claude Agent SDK, OpenAI Agents SDK, LangGraph, Mastra, Vercel AI SDK |
 | [`node/`](examples/node) | Plain `fetch` + an MCP client in Node — call a system's real API and its MCP tools, no framework |
 | [`python/`](examples/python) | The same in Python, as pytest tests you can copy into your suite |
+| [`ci/`](examples/ci) | A GitHub Actions workflow running those suites against a hosted environment |
 
 ## What Era is for
 
