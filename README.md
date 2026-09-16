@@ -82,6 +82,9 @@ Each system in an environment gets its own base URL, MCP URL, and credential;
 (`<SYSTEM>_BASE_URL`, `<SYSTEM>_MCP_URL`, `<SYSTEM>_MCP_HEADER`) so your code
 and the [examples](examples/) below pick them up with no editing.
 
+📚 The full API, MCP, and CLI reference lives in the
+**[Era docs](https://console.era.eon.io/docs.html)**.
+
 ## 🧪 Examples
 
 Runnable, self-contained starting points in [`examples/`](examples/):
