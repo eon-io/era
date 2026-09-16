@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Era by Eon">
+  <title>Era by Eon</title>
+  <rect width="64" height="64" fill="#FDF6EC"/>
+  <rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="#1C1512" stroke-width="3"/>
+  <g fill="#F2A9B4" stroke="#1C1512" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M23 29 10 50l13-4z"/>
+    <path d="M41 29 54 50l-13-4z"/>
+  </g>
+  <path d="M32 45c4 6 6 9 6 13-2-3-4-4-6-4s-4 1-6 4c0-4 2-7 6-13z" fill="#FF5C00" stroke="#1C1512" stroke-width="2"/>
+  <path d="M32 6c7 9 10 20 10 30v9H22v-9c0-10 3-21 10-30z" fill="#FDF6EC" stroke="#1C1512" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="32" cy="26" r="6" fill="#FF5C00" stroke="#1C1512" stroke-width="2.5"/>
+</svg>
