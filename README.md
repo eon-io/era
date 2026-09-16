@@ -11,7 +11,8 @@ benchmark — with zero real data.
 **Console:** [console.era.eon.io](https://console.era.eon.io/) ·
 **Docs:** [docs](https://console.era.eon.io/docs.html) ·
 **Use cases:** [use cases](https://console.era.eon.io/use-cases.html) ·
-**Machine-readable facts:** [llms.txt](https://console.era.eon.io/llms.txt)
+**Machine-readable facts:** [llms.txt](https://console.era.eon.io/llms.txt) ·
+**Community:** [Discord](https://discord.gg/FNC6nMeqbK)
 
 ## Why Era
 
@@ -122,6 +123,12 @@ Every environment is 100% synthetic. That's the point — and it also means Era
 is no substitute for a staging system that carries your real data. Use Era to
 get correct, tested, demoable software sooner; validate against your own
 staging before you ship.
+
+## Community
+
+Questions, feedback, or something you want Era to emulate? Join the
+[Era Discord](https://discord.gg/FNC6nMeqbK) — it's where builders and the team
+hang out.
 
 ---
 
