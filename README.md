@@ -93,6 +93,29 @@ Runnable, self-contained starting points in [`examples/`](examples/):
 - **Demos** — a believable company with history, not three rows of lorem ipsum.
 - **Benchmarks** — the same questions, the same ground truth, every run.
 
+## The research behind the data
+
+"Realistic" is a measurable claim. Era's generation pipeline is built and
+evaluated against the bar set by recent research on synthetic relational data:
+
+- [Benchmarking the Fidelity and Utility of Synthetic Relational Data](https://arxiv.org/abs/2410.03411)
+  (SyntheRela; Hudovernik et al.) — in relational data, error propagates down
+  the hierarchy: child tables synthesize worse than their parents. Era tracks
+  fidelity per reference depth.
+- [Measuring the Dependency Gap](https://arxiv.org/abs/2607.21636)
+  (Zhang et al.) — independently shuffled columns pass the usual marginal and
+  pairwise metrics. Era's checks read finished rows *jointly*, so inter-column
+  dependencies actually count.
+- [Hollywood: Towards a Large Movie Dataset for Database Benchmarking](https://arxiv.org/abs/2607.19666)
+  (Iachnyk et al.) — realism as cardinality behavior: synthetic data should
+  mislead an independence assumption the way real data does. Data that a naive
+  estimator predicts perfectly is data whose columns say nothing about each
+  other.
+- [TabQueryBench: A Query-Centric Benchmark for Synthetic Tabular Data](https://arxiv.org/abs/2607.03926)
+  (Zhang et al.) — query-centric fidelity collapses under local filters and
+  rare values, so tail predicates, missingness, and high-cardinality grouping
+  are measured as their own query families rather than averaged away.
+
 ## Honest limits
 
 Every environment is 100% synthetic. That's the point — and it also means Era
