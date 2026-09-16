@@ -1,6 +1,12 @@
 <div align="center">
-  <a href="https://console.era.eon.io/"><img src="assets/era.svg" alt="Era, by Eon" width="110"></a>
-  <h1>Era, by Eon</h1>
+  <a href="https://console.era.eon.io/"><img src="assets/era.svg" alt="" width="90"></a>
+  <br><br>
+  <a href="https://console.era.eon.io/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/era-wordmark-dark.svg">
+      <img src="assets/era-wordmark-light.svg" alt="Era, by Eon" width="400">
+    </picture>
+  </a>
   <p><strong>Super realistic synthetic companies.</strong></p>
   <p>
     <a href="https://console.era.eon.io/"><img src="https://img.shields.io/badge/console-era.eon.io-FF5C00" alt="Console"></a>
