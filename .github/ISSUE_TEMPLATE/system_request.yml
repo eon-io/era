@@ -1,0 +1,29 @@
+name: ✨ Request a system
+description: Ask for a system Era should emulate, or for an existing one to graduate into the `era new` picker.
+labels: [system-request]
+body:
+  - type: input
+    id: system
+    attributes:
+      label: Which system?
+      placeholder: e.g. Workday, NetSuite, ServiceNow
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What are you building against it?
+      description: The agent or integration you'd point at it, and the parts of the vendor's API that matter to you.
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which surface do you need?
+      multiple: true
+      options:
+        - MCP
+        - REST (the vendor's API shape)
+        - Both
+    validations:
+      required: true

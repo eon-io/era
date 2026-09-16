@@ -29,7 +29,8 @@ benchmark — with zero real data.
   behind a Salesforce opportunity is the same account a Zendesk ticket
   references and a Gong call discusses. Cross-system questions — *"which
   accounts with an open ticket have a renewal this quarter?"* — have real
-  answers.
+  answers. **61 systems** and counting — see the
+  [full catalog](SYSTEMS.md).
 - 🔌 **Real API shapes.** Each emulated system speaks its vendor's actual REST
   surface with realistic authentication, so the SDK or integration you ship is
   the one you test.
@@ -93,6 +94,50 @@ Runnable, self-contained starting points in [`examples/`](examples/):
 | [`node/`](examples/node) | Plain `fetch` + an MCP client in Node — call a system's real API and its MCP tools, no framework |
 | [`python/`](examples/python) | The same in Python, as pytest tests you can copy into your suite |
 | [`ci/`](examples/ci) | A GitHub Actions workflow running those suites against a hosted environment |
+
+## 🧭 Use cases
+
+Three recipes from the [use cases page](https://console.era.eon.io/use-cases.html) —
+tailor the right company, wire it into your agent, and ask.
+
+### AI SDR
+
+```bash
+era new --industry fintech --size mid --scenario hypergrowth \
+  --systems salesforce,hubspot,gong,slack
+```
+
+> Which open opportunities have had no contact in the last 21 days, and who owns them?
+>
+> Draft a follow-up to each champion that cites something from their own call, not a template.
+>
+> Where do HubSpot and Salesforce disagree about the same contact?
+
+### Support agent
+
+```bash
+era new --industry ecommerce --size mid --scenario churn_wave \
+  --systems zendesk,slack,jira-confluence,google-drive
+```
+
+> Triage the oldest ten open tickets: what is each one really about, and who should hold it?
+>
+> Answer the oldest open ticket using only what the company holds, citing the ticket or Slack message you took each fact from.
+>
+> Which tickets from the last week share one cause, and what is it?
+
+### Company brain
+
+```bash
+era new --industry fintech --size mid --strict \
+  --systems salesforce,hubspot,zendesk,jira-confluence,gong,slack,google-drive
+```
+
+> Tell me everything about our largest account: the deal, the open tickets, what was said internally, the documents written for them. Cite `system:id` for every fact.
+>
+> What did we promise this customer that engineering has not shipped? Name the Jira issue.
+>
+> Two systems disagree about this customer's plan. Which, and which is likelier to be right?
 
 ## 🎯 What Era is for
 

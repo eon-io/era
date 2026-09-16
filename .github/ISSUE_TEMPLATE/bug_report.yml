@@ -1,0 +1,31 @@
+name: 🐛 Bug report
+description: Something in Era behaved wrong — an API answered off-shape, MCP misbehaved, the CLI broke, or the data contradicts itself.
+labels: [bug]
+body:
+  - type: input
+    id: system
+    attributes:
+      label: System
+      description: Which emulated system (or CLI/console) is this about?
+      placeholder: e.g. salesforce, slack, era CLI, console
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what did Era return? Requests/responses or MCP tool calls welcome. Please don't paste tenant tokens.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: What would the real vendor's API have done, or what should the data have looked like?
+    validations:
+      required: true
+  - type: input
+    id: tenant
+    attributes:
+      label: Tenant (optional)
+      description: The tenant name helps us reproduce against your exact environment. Never share its token.
