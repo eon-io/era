@@ -1,0 +1,40 @@
+# Copy into .github/workflows/ of your repo. Runs the node/ and python/
+# examples against a hosted Era environment whose connection values are
+# stored as repository secrets — see README.md alongside this file.
+
+name: tests-against-era
+
+on: [push, pull_request]
+
+env:
+  SLACK_BASE_URL: ${{ secrets.SLACK_BASE_URL }}
+  SLACK_MCP_URL: ${{ secrets.SLACK_MCP_URL }}
+  SLACK_MCP_HEADER: ${{ secrets.SLACK_MCP_HEADER }}
+  ERA_TENANT_TOKEN: ${{ secrets.ERA_TENANT_TOKEN }}
+
+jobs:
+  node:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/node
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm test
+
+  python:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/python
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: pytest -v

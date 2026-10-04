@@ -1,0 +1,13 @@
+{
+  "name": "era-example-mastra",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node agent.mjs"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.0",
+    "@mastra/core": "^0.10.0",
+    "@mastra/mcp": "^0.10.0"
+  }
+}

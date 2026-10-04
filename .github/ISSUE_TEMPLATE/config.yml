@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Questions & help — Discord
+    url: https://discord.gg/FNC6nMeqbK
+    about: The fastest way to get an answer from the team and other builders.
+  - name: 🔑 Request access to Era
+    url: https://console.era.eon.io/access.html
+    about: Ask for an account on the hosted console.
+  - name: 📚 Documentation
+    url: https://console.era.eon.io/docs.html
+    about: API, MCP, and CLI reference.

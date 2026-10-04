@@ -1,0 +1,11 @@
+{
+  "name": "era-example-node",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}
